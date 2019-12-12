@@ -30,14 +30,14 @@ command:
     - --secret=[SECRET_TEXT]
 ```
 
-### 3. Running containers
+### 4. Running containers
 Run containers with Prometheus and SAKURA Cloud Exporter.
 
 ```
 docker-compose up -d
 ```
 
-### 4. Connecting to Prometheus
+### 5. Connecting to Prometheus
 Connecting to Prometheus GUI.
 
 http://localhost:9090/
