@@ -1,4 +1,4 @@
-# Monitoring Prometheus SAKURACloud
+# 🌸Monitoring Prometheus SAKURACloud🌸
 Easy setup for Monitoring SAKURA Cloud with Prometheus on Docker-Compose.
 
 ## How to use
