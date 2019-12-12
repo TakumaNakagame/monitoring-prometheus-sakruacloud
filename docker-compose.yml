@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  prometheus:
+    image: prom/prometheus:v2.14.0
+    ports:
+    - 9090:9090
+    volumes:
+    - ./conf/prometheus:/etc/prometheus
+    container_name: prometheus
+  exporter:
+    image: sacloud/sakuracloud_exporter:0.8.0
+    command: 
+    - --debug
+    - --token=acea7a90-106f-4553-8b09-d710473e6de5
+    - --secret=9clOJhNWTzLOZdCvmNvMXnhgJ82SzU89qUOVp1UBo0eMSI9yGrdLFwj18LhtZE3M
+    ports:
+    - 9542:9542
+    container_name: exporter

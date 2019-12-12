@@ -1,0 +1,13 @@
+# my global config
+global:
+  scrape_interval: 60s
+  scrape_timeout: 60s
+  evaluation_interval: 15s
+
+scrape_configs:
+- job_name: 'prometheus'
+  static_configs:
+  - targets: ['localhost:9090']
+- job_name: 'sakuracloud_exporer'
+  static_configs:
+  - targets: ['exporter:9542']
