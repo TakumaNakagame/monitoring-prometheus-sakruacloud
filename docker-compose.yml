@@ -11,9 +11,12 @@ services:
   exporter:
     image: sacloud/sakuracloud_exporter:0.8.0
     command: 
-    - --debug
+    - --debug    
+    - --fake-mode=/etc/sakuracloud_exporter/fake-store.json
     - --token=acea7a90-106f-4553-8b09-d710473e6de5
     - --secret=9clOJhNWTzLOZdCvmNvMXnhgJ82SzU89qUOVp1UBo0eMSI9yGrdLFwj18LhtZE3M
     ports:
     - 9542:9542
+    volumes:
+    - ./conf/sakuracloud_exporter:/etc/sakuracloud_exporter
     container_name: exporter
